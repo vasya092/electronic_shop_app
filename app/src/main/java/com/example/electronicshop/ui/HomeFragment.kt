@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.electronicshop.BaseApplication
 import com.example.electronicshop.R
 import com.example.electronicshop.databinding.FragmentHomeBinding
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
+import javax.inject.Inject
 
 /**
  * A simple [Fragment] subclass.
@@ -18,13 +20,14 @@ import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
 class HomeFragment : Fragment() {
 
     private var binding: FragmentHomeBinding? = null
-    private val viewModel: HomeFragmentViewModel by viewModels()
+    @Inject
+    lateinit var viewModel: HomeFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
+        (activity?.application as BaseApplication).appComponent.inject(this)
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding?.root
     }

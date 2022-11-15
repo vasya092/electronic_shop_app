@@ -9,11 +9,11 @@ import com.example.electronicshop.data.ProductsRepostoryImpl
 import com.example.electronicshop.data.network.ProductsListResponse
 import com.example.electronicshop.data.network.ShopApi
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 enum class ShopApiStatus {LOADING, ERROR, DONE}
 
-class HomeFragmentViewModel(): ViewModel() {
-    private val productsRepository = ProductsRepostoryImpl()
+class HomeFragmentViewModel @Inject constructor(private val productsRepository: ProductsRepository): ViewModel() {
 
     private val _status = MutableLiveData<ShopApiStatus>()
     val status: LiveData<ShopApiStatus> = _status
