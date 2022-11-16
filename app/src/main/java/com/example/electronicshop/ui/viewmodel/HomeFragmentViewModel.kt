@@ -8,6 +8,8 @@ import com.example.electronicshop.data.ProductsRepository
 import com.example.electronicshop.data.ProductsRepostoryImpl
 import com.example.electronicshop.data.network.ProductsListResponse
 import com.example.electronicshop.data.network.ShopApi
+import com.example.electronicshop.model.BestSellerProduct
+import com.example.electronicshop.model.HomeProduct
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -18,8 +20,11 @@ class HomeFragmentViewModel @Inject constructor(private val productsRepository: 
     private val _status = MutableLiveData<ShopApiStatus>()
     val status: LiveData<ShopApiStatus> = _status
 
-    private val _products = MutableLiveData<ProductsListResponse>()
-    val products: LiveData<ProductsListResponse> = _products
+    private val _homeProducts = MutableLiveData<List<HomeProduct>>()
+    val homeProducts: LiveData<List<HomeProduct>> = _homeProducts
+
+    private val _bestSellerProducts = MutableLiveData<List<BestSellerProduct>>()
+    val bestSellerProducts: LiveData<List<BestSellerProduct>> = _bestSellerProducts
 
     val info_text: String = "Info"
 
@@ -31,7 +36,9 @@ class HomeFragmentViewModel @Inject constructor(private val productsRepository: 
         viewModelScope.launch {
             _status.value = ShopApiStatus.LOADING
             try {
-                _products.value = productsRepository.getAllProducts()
+                val allProducts = productsRepository.getAllProducts()
+                _homeProducts.value = allProducts.home_store
+                _bestSellerProducts.value = allProducts.best_seller
                 _status.value = ShopApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = ShopApiStatus.ERROR
