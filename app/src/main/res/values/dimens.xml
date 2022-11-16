@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_padding_top">15dp</dimen>
+    <dimen name="main_padding_start_and_end">15dp</dimen>
+    <dimen name="section_title_font_size">25sp</dimen>
+    <dimen name="section_title_see_more_font_size">15sp</dimen>
+    <dimen name="section_title_margin_start">2dp</dimen>
+    <dimen name="section_title_margin_end">18dp</dimen>
+    <dimen name="category_menu_item_font_size">12sp</dimen>
+</resources>
