@@ -5,9 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.electronicshop.data.ProductsRepository
-import com.example.electronicshop.data.ProductsRepostoryImpl
-import com.example.electronicshop.data.network.ProductsListResponse
-import com.example.electronicshop.data.network.ShopApi
 import com.example.electronicshop.model.BestSellerProduct
 import com.example.electronicshop.model.HomeProduct
 import kotlinx.coroutines.launch

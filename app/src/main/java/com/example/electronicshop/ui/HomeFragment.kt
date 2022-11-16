@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import com.example.electronicshop.BaseApplication
-import com.example.electronicshop.R
 import com.example.electronicshop.databinding.FragmentHomeBinding
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
 import javax.inject.Inject
