@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
+import com.example.electronicshop.ui.adapter.CategoryMenuSliderAdapter
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
 import javax.inject.Inject
 
@@ -32,7 +34,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.homeTitle?.text = viewModel.info_text
+
+        val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
+        binding?.categoryMenuSlider?.adapter = adapter
     }
 
 }

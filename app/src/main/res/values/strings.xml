@@ -2,4 +2,13 @@
     <string name="app_name">Electronic Shop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragHome_tv_selectCategory">Select Category</string>
+    <string name="fragHome_tv_viewAll">view all</string>
+    <string name="title_category_item_phones">Phones</string>
+    <string name="title_category_item_computers">Computers</string>
+    <string name="title_category_item_health">Health</string>
+    <string name="title_category_item_books">Books</string>
+    <string name="title_category_item_other">Other</string>
+    <string name="icon_menu_item_category_text">Иконка меню категорий</string>
+
 </resources>

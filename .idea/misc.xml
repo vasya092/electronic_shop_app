@@ -3,7 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/circle_background.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/circle_backround_active.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_computer.xml" value="0.1015" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_health.xml" value="0.1015" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_phone.xml" value="0.1015" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_search.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_edit_text_background.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_menu_selector.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/font-v26/mark_pro.xml" value="0.22314814814814815" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/font-v26/sf_pro_display.xml" value="0.176" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/font/mark_pro.xml" value="0.22314814814814815" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout-v28/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/category_menu_item.xml" value="0.437219730941704" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_category_menu_item.xml" value="1.0" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/view_search_view.xml" value="0.4" />
         <entry key="..\:/private Projects/Learn/Android/interview/Test tasks/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/Test tasks/app/src/main/res/layout/content_main.xml" value="0.2825520833333333" />
         <entry key="..\:/private Projects/Learn/Android/interview/Test tasks/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />

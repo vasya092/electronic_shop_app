@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_padding_top">15dp</dimen>
+    <dimen name="main_padding_start_and_end">15dp</dimen>
+    <dimen name="section_title_font_size">25sp</dimen>
+    <dimen name="section_title_see_more_font_size">15sp</dimen>
+    <dimen name="section_title_margin_start">2dp</dimen>
+    <dimen name="section_title_margin_end">18dp</dimen>
+    <dimen name="category_menu_last_item_margin">25dp</dimen>
+    <dimen name="category_menu_item_font_size">12sp</dimen>
+    <dimen name="margin_start_search_icon">24dp</dimen>
+    <dimen name="padding_horizontal_search">60dp</dimen>
+    <dimen name="padding_vertical_search">9dp</dimen>
+    <dimen name="text_size_search">12sp</dimen>
+    <dimen name="margin_end_search_field">11dp</dimen>
+    <dimen name="margin_start_search_container">32dp</dimen>
+    <dimen name="margin_end_search_container">37dp</dimen>
+    <dimen name="margin_bottom_search_container">24dp</dimen>
+    <dimen name="margin_top_search_container">35dp</dimen>
+</resources>
