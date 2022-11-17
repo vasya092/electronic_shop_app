@@ -9,5 +9,6 @@
     <string name="title_category_item_health">Health</string>
     <string name="title_category_item_books">Books</string>
     <string name="title_category_item_other">Other</string>
+    <string name="icon_menu_item_category_text">Иконка меню категорий</string>
 
 </resources>

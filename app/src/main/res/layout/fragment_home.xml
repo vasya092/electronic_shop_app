@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/main_padding_top"
-    android:paddingStart="@dimen/main_padding_start_and_end"
-    android:paddingEnd="@dimen/main_padding_start_and_end"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/section_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/main_padding_top"
+        android:paddingStart="@dimen/main_padding_start_and_end"
+        android:paddingEnd="@dimen/main_padding_start_and_end"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
