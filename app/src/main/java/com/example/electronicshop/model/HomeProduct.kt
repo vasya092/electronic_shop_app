@@ -10,5 +10,6 @@ data class HomeProduct (
     val title: String,
     val picture: String,
     val subtitle: String,
-    val is_buy: Boolean
+    val is_buy: Boolean,
+    val is_new: Boolean = false
 )

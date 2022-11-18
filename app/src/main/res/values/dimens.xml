@@ -17,4 +17,21 @@
     <dimen name="margin_end_search_container">37dp</dimen>
     <dimen name="margin_bottom_search_container">24dp</dimen>
     <dimen name="margin_top_search_container">35dp</dimen>
+    <dimen name="padding_top_badge_new">7dp</dimen>
+    <dimen name="padding_bottom_badge_new">8dp</dimen>
+    <dimen name="padding_start_badge_new">4dp</dimen>
+    <dimen name="padding_end_badge_new">3dp</dimen>
+    <dimen name="font_size_start_badge_new">10sp</dimen>
+    <dimen name="margin_bottom_hot_sales_buy_now">26dp</dimen>
+    <dimen name="margin_start_hot_sales_container">25dp</dimen>
+    <dimen name="font_size_hot_sales_title">25sp</dimen>
+    <dimen name="line_height_hot_sales_title">29.83dp</dimen>
+    <dimen name="padding_top_hot_sales_title">59dp</dimen>
+    <dimen name="text_size_hot_sales_description">11sp</dimen>
+    <dimen name="line_height_hot_sales_description">13dp</dimen>
+    <dimen name="margin_top_hot_sales_description">5dp</dimen>
+    <dimen name="text_size_hot_sales_button">11sp</dimen>
+    <dimen name="margin_top_badge_new">14dp</dimen>
+    <dimen name="margin_bottom_hot_sales_description">26dp</dimen>
+    <dimen name="margin_top_hot_sales_slider">8dp</dimen>
 </resources>

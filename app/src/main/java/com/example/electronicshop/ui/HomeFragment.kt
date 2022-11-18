@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.electronicshop.BaseApplication
 import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
 import com.example.electronicshop.ui.adapter.CategoryMenuSliderAdapter
+import com.example.electronicshop.ui.adapter.HotSalesSliderAdapter
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
 import javax.inject.Inject
 
@@ -37,6 +40,17 @@ class HomeFragment : Fragment() {
 
         val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
         binding?.categoryMenuSlider?.adapter = adapter
+
+        val hotSalesSliderAdapter = HotSalesSliderAdapter {
+        }
+        viewModel.homeProducts.observe(viewLifecycleOwner) {
+            hotSalesSliderAdapter.submitList(it)
+        }
+        binding?.hotSalesProductsSlider?.adapter = hotSalesSliderAdapter
+        //Слайдинг по типу карусели
+        PagerSnapHelper().attachToRecyclerView(binding?.hotSalesProductsSlider)
+        var dividerItemDecoration = DividerItemDecoration(binding?.hotSalesProductsSlider?.context, 0)
+        binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
     }
 
 }
