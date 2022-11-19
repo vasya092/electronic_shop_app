@@ -34,4 +34,10 @@
     <dimen name="margin_top_badge_new">14dp</dimen>
     <dimen name="margin_bottom_hot_sales_description">26dp</dimen>
     <dimen name="margin_top_hot_sales_slider">8dp</dimen>
+    <dimen name="margin_top_category_menu_slider">24dp</dimen>
+    <dimen name="margin_start_category_menu_item">23dp</dimen>
+    <dimen name="size_category_menu_item_icon">71dp</dimen>
+    <dimen name="min_height_button">0dp</dimen>
+    <dimen name="padding_vertical_button">5dp</dimen>
+    <dimen name="padding_horizontal_button">27dp</dimen>
 </resources>
