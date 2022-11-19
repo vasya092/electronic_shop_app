@@ -41,4 +41,11 @@
     <dimen name="padding_vertical_button">5dp</dimen>
     <dimen name="padding_horizontal_button">27dp</dimen>
     <dimen name="radius_search_edit_text">15dp</dimen>
+    <dimen name="padding_top_section_hot_sales">24dp</dimen>
+    <dimen name="padding_top_best_sellers">11dp</dimen>
+    <dimen name="text_size_best_seller_price">16sp</dimen>
+    <dimen name="padding_start_seller_item">21dp</dimen>
+    <dimen name="size_discount_price">10sp</dimen>
+    <dimen name="end_padding_best_seller_item_price">7dp</dimen>
+    <dimen name="padding_bottom_best_seller_item">15dp</dimen>
 </resources>
