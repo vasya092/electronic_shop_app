@@ -40,4 +40,5 @@
     <dimen name="min_height_button">0dp</dimen>
     <dimen name="padding_vertical_button">5dp</dimen>
     <dimen name="padding_horizontal_button">27dp</dimen>
+    <dimen name="radius_search_edit_text">15dp</dimen>
 </resources>
