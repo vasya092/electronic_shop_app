@@ -13,7 +13,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="@font/mark_pro"
         android:textSize="@dimen/text_size_search"
         tools:text="test text"
         android:paddingHorizontal="@dimen/padding_horizontal_search"

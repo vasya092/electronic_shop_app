@@ -5,21 +5,19 @@
     android:id="@+id/category_menu_item"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_marginStart="23dp"
+    android:layout_marginStart="@dimen/margin_start_category_menu_item"
     android:orientation="vertical">
 
     <ImageButton
         android:id="@+id/category_menu_item_icon"
         android:src="@drawable/ic_phone"
-        android:layout_width="71dp"
-        android:layout_height="71dp"
+        android:layout_width="@dimen/size_category_menu_item_icon"
+        android:layout_height="@dimen/size_category_menu_item_icon"
         android:background="@drawable/rounded_menu_selector"
         android:contentDescription="@string/icon_menu_item_category_text" />
     <TextView
         android:id="@+id/category_menu_item_title"
         android:layout_width="wrap_content"
-        android:fontFamily="@font/mark_pro"
-        android:textColor="@color/black"
         android:textFontWeight="500"
         android:textSize="@dimen/category_menu_item_font_size"
         android:layout_height="wrap_content"
