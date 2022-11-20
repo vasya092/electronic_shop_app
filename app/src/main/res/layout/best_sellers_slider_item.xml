@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/spacing_hot_sales_grid_layout"
     android:paddingBottom="@dimen/padding_bottom_best_seller_item"
+    android:paddingTop="@dimen/best_seller_padding_to_fix_image_corner"
     android:background="@drawable/rounded_best_seller_item_background">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/best_seller_item_image"
@@ -43,6 +45,8 @@
         app:layout_constraintTop_toBottomOf="@id/best_seller_item_price"
         app:layout_constraintStart_toStartOf="@id/best_seller_item_price"
         android:paddingHorizontal="@dimen/padding_start_seller_item"
+        android:textSize="@dimen/text_size_best_seller_item_title"
+        android:lineHeight="@dimen/line_height_best_seller_item_title"
         tools:text="Samsung Galaxy s20 Ultra"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

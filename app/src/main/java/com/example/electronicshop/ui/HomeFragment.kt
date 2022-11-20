@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.R
 import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
 import com.example.electronicshop.ui.adapter.BestSellersSliderAdapter
@@ -60,7 +61,6 @@ class HomeFragment : Fragment() {
         }
         binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
         binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
-        binding?.bestSalesSlider?.addItemDecoration(dividerItemDecoration)
     }
 
 }

@@ -46,6 +46,10 @@
     <dimen name="text_size_best_seller_price">16sp</dimen>
     <dimen name="padding_start_seller_item">21dp</dimen>
     <dimen name="size_discount_price">10sp</dimen>
+    <dimen name="spacing_hot_sales_grid_layout">4dp</dimen>
     <dimen name="end_padding_best_seller_item_price">7dp</dimen>
     <dimen name="padding_bottom_best_seller_item">15dp</dimen>
+    <dimen name="best_seller_padding_to_fix_image_corner">2dp</dimen>
+    <dimen name="text_size_best_seller_item_title">10sp</dimen>
+    <dimen name="line_height_best_seller_item_title">13dp</dimen>
 </resources>
