@@ -22,8 +22,6 @@ class HomeFragmentViewModel @Inject constructor(private val productsRepository: 
     private val _bestSellerProducts = MutableLiveData<List<BestSellerProduct>>()
     val bestSellerProducts: LiveData<List<BestSellerProduct>> = _bestSellerProducts
 
-    val info_text: String = "Info"
-
     init {
         getProducts()
     }
