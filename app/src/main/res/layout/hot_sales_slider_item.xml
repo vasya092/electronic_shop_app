@@ -8,14 +8,30 @@
     android:paddingEnd="0dp"
     android:background="@drawable/rounded_hot_sales_container"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/hot_sales_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_right_hot_sales_background"
+        tools:src="@drawable/test_apple_background"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/offset_right_hot_sales_background"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gradient_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/rounded_background_gradient_hot_sales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/wrapper_left_side_hot_sales"
         android:layout_width="0dp"
-        app:layout_constraintHorizontal_weight="0.3"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/hot_sales_picture">
+        app:layout_constraintStart_toStartOf="parent">
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/hot_sales_badge"
         android:layout_width="wrap_content"
@@ -79,14 +95,4 @@
         style="@style/WhiteButton"
         />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/hot_sales_picture"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="0.7"
-        tools:src="@drawable/test_apple_background"
-        app:layout_constraintStart_toEndOf="@id/wrapper_left_side_hot_sales"
-        app:layout_constraintBottom_toBottomOf="@id/wrapper_left_side_hot_sales"
-        android:scaleType="fitEnd"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

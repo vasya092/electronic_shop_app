@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.R
 import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
+import com.example.electronicshop.ui.adapter.BestSellersSliderAdapter
 import com.example.electronicshop.ui.adapter.CategoryMenuSliderAdapter
 import com.example.electronicshop.ui.adapter.HotSalesSliderAdapter
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
@@ -51,6 +54,13 @@ class HomeFragment : Fragment() {
         PagerSnapHelper().attachToRecyclerView(binding?.hotSalesProductsSlider)
         var dividerItemDecoration = DividerItemDecoration(binding?.hotSalesProductsSlider?.context, 0)
         binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
+
+        val bestSellersSliderAdapter = BestSellersSliderAdapter()
+        viewModel.bestSellerProducts.observe(viewLifecycleOwner) {
+            bestSellersSliderAdapter.submitList(it)
+        }
+        binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
+        binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
     }
 
 }

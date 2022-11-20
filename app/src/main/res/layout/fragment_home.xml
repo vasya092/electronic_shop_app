@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/section_header"
         android:layout_width="match_parent"
@@ -78,10 +81,10 @@
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/section_hot_sales_header"
+        android:id="@+id/section_hot_sales"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/main_padding_top"
+        android:paddingTop="@dimen/padding_top_section_hot_sales"
         android:paddingStart="@dimen/main_padding_start_and_end"
         android:paddingEnd="@dimen/main_padding_start_and_end"
         app:layout_constraintTop_toBottomOf="@id/search_block"
@@ -119,4 +122,46 @@
             app:layout_constraintTop_toBottomOf="@id/hot_sales_section_title"
             app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/section_best_sellers_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top_best_sellers"
+        android:paddingStart="@dimen/main_padding_start_and_end"
+        android:paddingEnd="@dimen/main_padding_start_and_end"
+        app:layout_constraintTop_toBottomOf="@id/section_hot_sales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/section_best_sellers_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/section_title_font_size"
+            android:textFontWeight="700"
+            android:text="@string/text_hot_sales_section_title"
+            android:layout_marginStart="@dimen/section_title_margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragHome_tv_viewAll"
+            android:textSize="@dimen/section_title_see_more_font_size"
+            android:layout_marginEnd="@dimen/section_title_margin_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/section_best_sellers_title"
+            app:layout_constraintBottom_toBottomOf="@id/section_best_sellers_title"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/best_sales_slider"
+            android:layout_width="match_parent"
+            android:overScrollMode="always"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_top_hot_sales_slider"
+            app:layout_constraintTop_toBottomOf="@id/section_best_sellers_title"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
