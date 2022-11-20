@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.electronicshop.R
 import com.example.electronicshop.databinding.BestSellersSliderItemBinding
 import com.example.electronicshop.model.BestSellerProduct
@@ -17,7 +18,7 @@ class BestSellersSliderAdapter(): ListAdapter<BestSellerProduct, BestSellersSlid
         fun bind(bestSellerProduct: BestSellerProduct) {
             binding.bestSellerItemPrice.text = bestSellerProduct.price_without_discount.toString()
             binding.bestSellerItemTitle.text = bestSellerProduct.title
-            binding.bestSellerItemImage.setImageResource(R.drawable.test_smartphone_bestsellers)
+            binding.bestSellerItemImage.load(bestSellerProduct.picture)
             binding.discountPrice.text = bestSellerProduct.discount_price.toString()
         }
     }
