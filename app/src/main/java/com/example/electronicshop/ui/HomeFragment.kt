@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -55,7 +56,9 @@ class HomeFragment : Fragment() {
         var dividerItemDecoration = DividerItemDecoration(binding?.hotSalesProductsSlider?.context, 0)
         binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
 
-        val bestSellersSliderAdapter = BestSellersSliderAdapter()
+        val bestSellersSliderAdapter = BestSellersSliderAdapter {
+            findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
+        }
         viewModel.bestSellerProducts.observe(viewLifecycleOwner) {
             bestSellersSliderAdapter.submitList(it)
         }

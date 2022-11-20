@@ -10,7 +10,9 @@ import com.example.electronicshop.R
 import com.example.electronicshop.databinding.BestSellersSliderItemBinding
 import com.example.electronicshop.model.BestSellerProduct
 
-class BestSellersSliderAdapter(): ListAdapter<BestSellerProduct, BestSellersSliderAdapter.BestSellersSliderViewHolder>(DiffCallback) {
+class BestSellersSliderAdapter(
+    private val clickListener: (BestSellerProduct) -> Unit
+): ListAdapter<BestSellerProduct, BestSellersSliderAdapter.BestSellersSliderViewHolder>(DiffCallback) {
 
     class BestSellersSliderViewHolder(
         private var binding: BestSellersSliderItemBinding
@@ -42,6 +44,9 @@ class BestSellersSliderAdapter(): ListAdapter<BestSellerProduct, BestSellersSlid
 
     override fun onBindViewHolder(holder: BestSellersSliderViewHolder, position: Int) {
         val item = getItem(position)
+        holder.itemView.setOnClickListener{
+            clickListener(item)
+        }
         holder.bind(item)
     }
 
