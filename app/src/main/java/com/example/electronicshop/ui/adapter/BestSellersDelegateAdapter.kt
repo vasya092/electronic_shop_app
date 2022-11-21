@@ -1,6 +1,5 @@
 package com.example.electronicshop.ui.adapter
 
-import android.view.View
 import coil.load
 import com.example.electronicshop.databinding.BestSellersSliderItemBinding
 import com.example.electronicshop.model.BestSellerProduct

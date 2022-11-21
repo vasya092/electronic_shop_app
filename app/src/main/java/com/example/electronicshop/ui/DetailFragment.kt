@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.electronicshop.BaseApplication
 import com.example.electronicshop.databinding.FragmentDetailBinding
+import com.example.electronicshop.ui.adapter.CarouselAdapter
 import com.example.electronicshop.ui.viewmodel.DetailProductViewModel
 import javax.inject.Inject
 
-class DetailFragment: Fragment() {
 
+class DetailFragment: Fragment() {
 
     private var binding: FragmentDetailBinding? = null
     @Inject
@@ -20,7 +21,7 @@ class DetailFragment: Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
 
         (activity?.application as BaseApplication).appComponent.inject(this)
@@ -30,6 +31,11 @@ class DetailFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.testTextView?.text = viewModel.status.value.toString()
+
+        viewModel.productDetail.observe(viewLifecycleOwner) {
+            val adapter = CarouselAdapter(viewModel.productDetail.value?.images)
+            binding?.carousel?.setAdapter(adapter)
+            binding?.carousel?.refresh()
+        }
     }
 }
