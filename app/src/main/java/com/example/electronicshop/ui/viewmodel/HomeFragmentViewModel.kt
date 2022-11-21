@@ -5,12 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.electronicshop.data.ProductsRepository
+import com.example.electronicshop.data.ShopApiStatus
 import com.example.electronicshop.model.BestSellerProduct
 import com.example.electronicshop.model.HomeProduct
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-enum class ShopApiStatus {LOADING, ERROR, DONE}
 
 class HomeFragmentViewModel @Inject constructor(private val productsRepository: ProductsRepository): ViewModel() {
 
@@ -22,8 +21,6 @@ class HomeFragmentViewModel @Inject constructor(private val productsRepository: 
 
     private val _bestSellerProducts = MutableLiveData<List<BestSellerProduct>>()
     val bestSellerProducts: LiveData<List<BestSellerProduct>> = _bestSellerProducts
-
-    val info_text: String = "Info"
 
     init {
         getProducts()

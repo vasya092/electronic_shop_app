@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -12,10 +13,11 @@ import com.example.electronicshop.BaseApplication
 import com.example.electronicshop.R
 import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
-import com.example.electronicshop.ui.adapter.BestSellersSliderAdapter
+import com.example.electronicshop.ui.adapter.BestSellersDelegateAdapter
 import com.example.electronicshop.ui.adapter.CategoryMenuSliderAdapter
-import com.example.electronicshop.ui.adapter.HotSalesSliderAdapter
+import com.example.electronicshop.ui.adapter.HotSalesDelegateAdapter
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
+import com.livermor.delegateadapter.delegate.CompositeDelegateAdapter
 import javax.inject.Inject
 
 /**
@@ -44,20 +46,28 @@ class HomeFragment : Fragment() {
         val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
         binding?.categoryMenuSlider?.adapter = adapter
 
-        val hotSalesSliderAdapter = HotSalesSliderAdapter {
-        }
+        val hotSalesSliderAdapter = CompositeDelegateAdapter(
+            HotSalesDelegateAdapter()
+        )
         viewModel.homeProducts.observe(viewLifecycleOwner) {
-            hotSalesSliderAdapter.submitList(it)
+            hotSalesSliderAdapter.swapData(it)
         }
         binding?.hotSalesProductsSlider?.adapter = hotSalesSliderAdapter
         //Слайдинг по типу карусели
         PagerSnapHelper().attachToRecyclerView(binding?.hotSalesProductsSlider)
+        //Отступы для слайдера hotSales
         var dividerItemDecoration = DividerItemDecoration(binding?.hotSalesProductsSlider?.context, 0)
         binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
 
-        val bestSellersSliderAdapter = BestSellersSliderAdapter()
+        //Настройка Best Sellers Slider
+
+        val bestSellersSliderAdapter = CompositeDelegateAdapter(
+            BestSellersDelegateAdapter {
+                findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
+            }
+        )
         viewModel.bestSellerProducts.observe(viewLifecycleOwner) {
-            bestSellersSliderAdapter.submitList(it)
+            bestSellersSliderAdapter.swapData(it)
         }
         binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
         binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
