@@ -15,7 +15,7 @@ import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
 import com.example.electronicshop.ui.adapter.BestSellersDelegateAdapter
 import com.example.electronicshop.ui.adapter.CategoryMenuSliderAdapter
-import com.example.electronicshop.ui.adapter.HotSalesSliderAdapter
+import com.example.electronicshop.ui.adapter.HotSalesDelegateAdapter
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
 import com.livermor.delegateadapter.delegate.CompositeDelegateAdapter
 import javax.inject.Inject
@@ -46,10 +46,11 @@ class HomeFragment : Fragment() {
         val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
         binding?.categoryMenuSlider?.adapter = adapter
 
-        val hotSalesSliderAdapter = HotSalesSliderAdapter {
-        }
+        val hotSalesSliderAdapter = CompositeDelegateAdapter(
+            HotSalesDelegateAdapter()
+        )
         viewModel.homeProducts.observe(viewLifecycleOwner) {
-            hotSalesSliderAdapter.submitList(it)
+            hotSalesSliderAdapter.swapData(it)
         }
         binding?.hotSalesProductsSlider?.adapter = hotSalesSliderAdapter
         //Слайдинг по типу карусели
