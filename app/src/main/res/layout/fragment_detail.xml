@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/product_slider_layout"
     android:layout_width="match_parent"
     android:layout_height="365dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layoutDescription="@xml/detail_product_slider_scene"
-    xmlns:tools="http://schemas.android.com/tools">
+    app:layoutDescription="@xml/detail_product_slider_scene">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -14,7 +19,7 @@
         android:layout_height="270dp"
         android:layout_marginEnd="16dp"
         android:scaleType="fitCenter"
-        android:background="@drawable/rounded_best_seller_item_background"
+        android:background="@drawable/rounded_detail_product_slider_background"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
@@ -25,7 +30,7 @@
         android:layout_width="266dp"
         android:layout_height="335dp"
         android:scaleType="fitCenter"
-        android:background="@drawable/rounded_best_seller_item_background"
+        android:background="@drawable/rounded_detail_product_slider_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
@@ -36,7 +41,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="335dp"
-        android:background="@drawable/rounded_best_seller_item_background"
+        android:background="@drawable/rounded_detail_product_slider_background"
         android:layout_marginStart="26dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,5 +73,194 @@
         app:carousel_infinite="true"
         app:carousel_firstView="@+id/imageView2"
         app:constraint_referenced_ids="imageView1,imageView2,imageView3" />
-
 </androidx.constraintlayout.motion.widget.MotionLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_detail_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/padding_start_product_detail_wrapper"
+        android:paddingBottom="@dimen/padding_bottom_product_detail_wrapper"
+        android:paddingTop="@dimen/padding_top_product_detail_wrapper"
+        android:paddingEnd="@dimen/padding_end_product_detail_wrapper"
+        app:layout_constraintTop_toBottomOf="@id/product_slider_layout"
+        android:background="@drawable/rounded_detail_product_content_background"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/mark_pro"
+            android:textFontWeight="500"
+            android:layout_marginStart="@dimen/sub_margin_product_detail_content"
+            android:textSize="@dimen/size_product_detail_title"
+            tools:text="Galaxy Note 20 Ultra"/>
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/product_detail_rating"
+            android:layout_marginTop="@dimen/margin_top_product_detail_rating"
+            android:layout_marginBottom="@dimen/margin_bottom_product_detail_rating"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/sub_margin_product_detail_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:rating="5"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/product_detail_tabs"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_rating"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@color/orange"
+            app:tabIndicatorHeight="3dp"
+            app:tabTextAppearance="@style/TextAppearance.ElectronicShop.TabItems"
+            android:layout_height="60dp">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_title_tab_item_product_detail"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_title_tab_item_product_detail"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/features_title_tab_item_product_detail"
+                />
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/advantages_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_tabs"
+            android:layout_marginTop="@dimen/margin_top_advantages_wrapper"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical"
+                android:gravity="center">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="@dimen/margin_bottom_advantage_icon"
+                    android:src="@drawable/ic_cpu"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_advantages_cpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="test text"
+                    android:textColor="@color/advantage_title_color"
+                    android:fontFamily="@font/mark_pro"
+                    android:textSize="@dimen/text_size_advantage_title"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical"
+                android:gravity="center">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_photo"
+                    android:layout_marginBottom="@dimen/margin_bottom_advantage_icon"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_advantages_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="test text"
+                    android:textColor="@color/advantage_title_color"
+                    android:fontFamily="@font/mark_pro"
+                    android:textSize="@dimen/text_size_advantage_title"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical"
+                android:gravity="center">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_ram"
+                    android:layout_marginBottom="@dimen/margin_bottom_advantage_icon"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_advantages_ssd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="test text"
+                    android:textColor="@color/advantage_title_color"
+                    android:fontFamily="@font/mark_pro"
+                    android:textSize="@dimen/text_size_advantage_title"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical"
+                android:gravity="center">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_card"
+                    android:layout_marginBottom="@dimen/margin_bottom_advantage_icon"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_advantages_hdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="test text"
+                    android:textColor="@color/advantage_title_color"
+                    android:fontFamily="@font/mark_pro"
+                    android:textSize="@dimen/text_size_advantage_title"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/select_options_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/advantages_wrapper"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/title_select_options"
+            android:textFontWeight="500"
+            android:layout_marginTop="@dimen/margin_top_select_options_title"
+            android:textSize="16sp"
+            android:layout_marginBottom="@dimen/margin_bottom_select_options_title"
+            />
+        <FrameLayout
+            android:id="@+id/select_color_button_first"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/select_options_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/circle_background_select_color">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/select_color_button_second"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/select_options_title"
+            app:layout_constraintStart_toEndOf="@id/select_color_button_first"
+            android:background="@drawable/circle_background_select_color"
+            android:layout_marginStart="@dimen/margin_start_select_color_button_second">    w
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

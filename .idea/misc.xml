@@ -4,13 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/circle_background.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/circle_background_selecto_color.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/circle_backround_active.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/circle_backround_orange.xml" value="0.1215" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_computer.xml" value="0.1015" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_hdd.xml" value="0.108" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_health.xml" value="0.1015" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_phone.xml" value="0.1015" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_search.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_background_gradient_hot_sales.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_best_seller_item_background.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_detail_product_content_background.xml" value="0.1195" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_detail_product_slider_background.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_edit_text_background.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_hot_sales_container.xml" value="0.12" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_menu_selector.xml" value="0.1205" />
@@ -23,7 +28,7 @@
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/category_menu_item.xml" value="0.437219730941704" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_category_menu_item.xml" value="1.0" />
-        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_detail.xml" value="0.19285714285714287" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_detail.xml" value="0.37389770723104054" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/hot_sales_slider_item.xml" value="0.176" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/image_item.xml" value="0.11302083333333333" />

@@ -33,6 +33,12 @@ class DetailFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.productDetail.observe(viewLifecycleOwner) {
+            binding?.productDetailTitle?.text = it.title
+            binding?.titleAdvantagesCpu?.text = it.CPU
+            binding?.titleAdvantagesCamera?.text = it.camera
+            binding?.titleAdvantagesSsd?.text = it.ssd
+            binding?.titleAdvantagesHdd?.text = it.sd
+            binding?.selectColorButtonFirst?.isActivated = true
             val adapter = CarouselAdapter(viewModel.productDetail.value?.images)
             binding?.carousel?.setAdapter(adapter)
             binding?.carousel?.refresh()

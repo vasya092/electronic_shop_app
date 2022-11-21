@@ -54,4 +54,18 @@
     <dimen name="line_height_best_seller_item_title">13dp</dimen>
     <dimen name="offset_right_hot_sales_background">-170dp</dimen>
     <dimen name="height_right_hot_sales_background">182dp</dimen>
+    <dimen name="padding_start_product_detail_wrapper">29dp</dimen>
+    <dimen name="padding_bottom_product_detail_wrapper">36dp</dimen>
+    <dimen name="padding_top_product_detail_wrapper">28dp</dimen>
+    <dimen name="padding_end_product_detail_wrapper">30dp</dimen>
+    <dimen name="size_product_detail_title">24sp</dimen>
+    <dimen name="margin_top_product_detail_rating">7dp</dimen>
+    <dimen name="margin_bottom_product_detail_rating">32dp</dimen>
+    <dimen name="sub_margin_product_detail_content">9dp</dimen>
+    <dimen name="margin_top_advantages_wrapper">33dp</dimen>
+    <dimen name="text_size_advantage_title">11sp</dimen>
+    <dimen name="margin_bottom_advantage_icon">5dp</dimen>
+    <dimen name="margin_top_select_options_title">29dp</dimen>
+    <dimen name="margin_bottom_select_options_title">15dp</dimen>
+    <dimen name="margin_start_select_color_button_second">19dp</dimen>
 </resources>
