@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.electronicshop.BaseApplication
 import com.example.electronicshop.R
 import com.example.electronicshop.databinding.FragmentDetailBinding
@@ -38,20 +39,31 @@ class DetailFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.productDetail.observe(viewLifecycleOwner) {
-            binding?.productDetailTitle?.text = it.title
-            binding?.titleAdvantagesCpu?.text = it.CPU
-            binding?.titleAdvantagesCamera?.text = it.camera
-            binding?.titleAdvantagesSsd?.text = it.ssd
-            binding?.titleAdvantagesHdd?.text = it.sd
+            binding?.apply {
+                productDetailTitle.text = it.title
+                titleAdvantagesCpu.text = it.CPU
+                titleAdvantagesCamera.text = it.camera
+                titleAdvantagesSsd.text = it.ssd
+                titleAdvantagesHdd.text = it.sd
 
-            binding?.selectColorFirst?.backgroundTintList = ColorStateList.valueOf(Color.parseColor(it.color[0]))
-            binding?.selectColorSecond?.backgroundTintList = ColorStateList.valueOf(Color.parseColor(it.color[1]))
+                selectColorFirst.backgroundTintList = ColorStateList.valueOf(Color.parseColor(it.color[0]))
+                selectColorSecond.backgroundTintList = ColorStateList.valueOf(Color.parseColor(it.color[1]))
 
-            binding?.selectMemoryFirst?.text = resources.getString(R.string.select_memory_text_constructor, it.capacity[0])
-            binding?.selectMemorySecond?.text = resources.getString(R.string.select_memory_text_constructor, it.capacity[1])
-            val adapter = CarouselAdapter(viewModel.productDetail.value?.images)
-            binding?.carousel?.setAdapter(adapter)
-            binding?.carousel?.refresh()
+                selectMemoryFirst.text = resources.getString(R.string.select_memory_text_constructor, it.capacity[0])
+                selectMemorySecond.text = resources.getString(R.string.select_memory_text_constructor, it.capacity[1])
+
+                val adapter = CarouselAdapter(viewModel.productDetail.value?.images)
+                carousel.setAdapter(adapter)
+                carousel.refresh()
+
+                addToCartButton.setOnClickListener{
+                    findNavController().navigate(R.id.action_detailFragment_to_cartFragment)
+                }
+
+            }
+
+
+
         }
     }
 }

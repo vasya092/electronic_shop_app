@@ -20,6 +20,8 @@
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/memory_radio_button_selector.xml" value="0.1215" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_background_gradient_hot_sales.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_best_seller_item_background.xml" value="0.1205" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_cart_background.xml" value="0.264" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_counter_background.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_detail_product_content_background.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_detail_product_slider_background.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_edit_text_background.xml" value="0.1205" />
@@ -34,15 +36,18 @@
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout-v28/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/best_sellers_slider_item.xml" value="0.34210526315789475" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/cart_list_item.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/category_menu_item.xml" value="0.437219730941704" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/custom_radio_button.xml" value="0.11041666666666666" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_cart.xml" value="0.25759416767922233" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_category_menu_item.xml" value="1.0" />
-        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_detail.xml" value="0.2548076923076923" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_detail.xml" value="0.136" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/hot_sales_slider_item.xml" value="0.176" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/image_item.xml" value="0.11302083333333333" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/text_item.xml" value="0.11197916666666667" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/view_counter_view.xml" value="1.2" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/view_search_view.xml" value="0.4" />
         <entry key="..\:/private Projects/Learn/Android/interview/Test tasks/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/Test tasks/app/src/main/res/layout/content_main.xml" value="0.2825520833333333" />

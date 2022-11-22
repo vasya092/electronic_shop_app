@@ -18,5 +18,9 @@
     <string name="detail_features">Features</string>
     <string name="select_memory_text_constructor">%1$s gb</string>
     <string name="title_select_options">Select color and capacity</string>
+    <string name="title_my_cart">My Cart</string>
+    <string name="checkout_button">Checkout</string>
+    <string name="delivery">Delivery</string>
+    <string name="total">Total</string>
 
 </resources>
