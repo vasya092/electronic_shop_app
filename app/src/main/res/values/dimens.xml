@@ -100,4 +100,5 @@
     <dimen name="margin_bottom_first_divider">15dp</dimen>
     <dimen name="padding_text_field_counter">7dp</dimen>
     <dimen name="margin_from_counter_value">6dp</dimen>
+    <dimen name="line_extra_3dp">3dp</dimen>
 </resources>
