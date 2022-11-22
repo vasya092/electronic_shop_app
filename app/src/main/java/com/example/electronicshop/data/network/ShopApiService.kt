@@ -1,5 +1,6 @@
 package com.example.electronicshop.data.network
 
+import com.example.electronicshop.model.CartData
 import com.example.electronicshop.model.DetailProduct
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -25,6 +26,9 @@ interface ShopApiService {
 
     @GET("6c14c560-15c6-4248-b9d2-b4508df7d4f5")
     suspend fun getProductDetail(): DetailProduct
+
+    @GET("53539a72-3c5f-4f30-bbb1-6ca10d42c149")
+    suspend fun getCart(): CartData
 }
 
 object ShopApi {

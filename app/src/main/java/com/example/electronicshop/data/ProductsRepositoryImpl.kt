@@ -2,6 +2,7 @@ package com.example.electronicshop.data
 
 import com.example.electronicshop.data.network.ProductsListResponse
 import com.example.electronicshop.data.network.ShopApi
+import com.example.electronicshop.model.CartData
 import com.example.electronicshop.model.DetailProduct
 
 class ProductsRepositoryImpl(): ProductsRepository{
@@ -11,6 +12,10 @@ class ProductsRepositoryImpl(): ProductsRepository{
 
     override suspend fun getProductDetail(): DetailProduct {
         return ShopApi.retrofitService.getProductDetail()
+    }
+
+    override suspend fun getCart(): CartData {
+        return ShopApi.retrofitService.getCart()
     }
 
 }

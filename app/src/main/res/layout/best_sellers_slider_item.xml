@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="@id/best_seller_item_price"
         android:paddingHorizontal="@dimen/padding_start_seller_item"
         android:textSize="@dimen/text_size_best_seller_item_title"
-        android:lineHeight="@dimen/line_height_best_seller_item_title"
+        android:lineSpacingExtra="@dimen/line_extra_3dp"
         tools:text="Samsung Galaxy s20 Ultra"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
