@@ -68,4 +68,12 @@
     <dimen name="margin_top_select_options_title">29dp</dimen>
     <dimen name="margin_bottom_select_options_title">15dp</dimen>
     <dimen name="margin_start_select_color_button_second">19dp</dimen>
+    <dimen name="select_color_size">40dp</dimen>
+    <dimen name="margin_top_radio_group_color">15dp</dimen>
+    <dimen name="padding_horizontal_select_memory_radio">15dp</dimen>
+    <dimen name="padding_vertical_select_memory_radio">7dp</dimen>
+    <dimen name="margin_end_first_memory_select">20dp</dimen>
+    <dimen name="margin_top_add_to_cart_button">27dp</dimen>
+    <dimen name="text_size_select_options_title">16sp</dimen>
+    <dimen name="margin_end_select_color_first">19dp</dimen>
 </resources>
