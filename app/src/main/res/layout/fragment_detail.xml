@@ -102,6 +102,7 @@
             android:id="@+id/product_detail_rating"
             android:layout_marginTop="@dimen/margin_top_product_detail_rating"
             android:layout_marginBottom="@dimen/margin_bottom_product_detail_rating"
+            android:isIndicator="true"
             app:layout_constraintTop_toBottomOf="@id/product_detail_title"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="@dimen/sub_margin_product_detail_content"

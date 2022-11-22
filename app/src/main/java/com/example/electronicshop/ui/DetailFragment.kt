@@ -52,6 +52,8 @@ class DetailFragment: Fragment() {
                 selectMemoryFirst.text = resources.getString(R.string.select_memory_text_constructor, it.capacity[0])
                 selectMemorySecond.text = resources.getString(R.string.select_memory_text_constructor, it.capacity[1])
 
+                productDetailRating.rating = it.rating.toFloat()
+
                 val adapter = CarouselAdapter(viewModel.productDetail.value?.images)
                 carousel.setAdapter(adapter)
                 carousel.refresh()
