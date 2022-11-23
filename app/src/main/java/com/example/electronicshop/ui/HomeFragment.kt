@@ -1,10 +1,12 @@
 package com.example.electronicshop.ui
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -45,6 +47,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
+
         binding?.categoryMenuSlider?.adapter = adapter
 
         val hotSalesSliderAdapter = CompositeDelegateAdapter(

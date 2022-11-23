@@ -18,10 +18,12 @@
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_phone.xml" value="0.1015" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/ic_search.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/memory_radio_button_selector.xml" value="0.1215" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_30.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_background_gradient_hot_sales.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_best_seller_item_background.xml" value="0.1205" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_cart_background.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_counter_background.xml" value="0.1195" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_dark_10.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_detail_product_content_background.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_detail_product_slider_background.xml" value="0.1195" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/drawable/rounded_edit_text_background.xml" value="0.1205" />
@@ -36,6 +38,7 @@
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout-v28/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/best_sellers_slider_item.xml" value="0.34210526315789475" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/bottom_sheet_filter.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/cart_list_item.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/category_menu_item.xml" value="0.437219730941704" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
@@ -46,6 +49,8 @@
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/hot_sales_slider_item.xml" value="0.176" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/image_item.xml" value="0.11302083333333333" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/rounded_30.xml" value="0.109375" />
+        <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/spinner_item.xml" value="0.2" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/text_item.xml" value="0.11197916666666667" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/toolbar.xml" value="0.264" />
         <entry key="..\:/private Projects/Learn/Android/interview/TZ/Effective Mobile/app/src/main/res/layout/view_counter_view.xml" value="1.2" />

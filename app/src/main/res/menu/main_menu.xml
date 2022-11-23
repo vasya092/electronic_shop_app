@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.takewith.MainActivity">
     <item
-        android:id="@+id/action_edit"
+        android:id="@+id/action_filter"
         android:icon="@drawable/ic_filter"
         app:showAsAction="always"
         android:title="@string/filter" />
