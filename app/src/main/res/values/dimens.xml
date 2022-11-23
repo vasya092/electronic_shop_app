@@ -122,4 +122,6 @@
     <dimen name="padding_end_toolbar">42dp</dimen>
     <dimen name="margin_end_address">9dp</dimen>
     <dimen name="text_size_location_address">15sp</dimen>
+    <dimen name="margin_end_like">15dp</dimen>
+    <dimen name="margin_top_like">11dp</dimen>
 </resources>

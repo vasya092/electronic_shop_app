@@ -52,6 +52,10 @@ class DetailFragment: Fragment() {
                 titleAdvantagesSsd.text = it.ssd
                 titleAdvantagesHdd.text = it.sd
 
+                if(it.isFavorites) {
+                    productDetailLike.setImageResource(R.drawable.ic_like_solid)
+                }
+
                 selectColorFirst.backgroundTintList = ColorStateList.valueOf(Color.parseColor(it.color[0]))
                 selectColorSecond.backgroundTintList = ColorStateList.valueOf(Color.parseColor(it.color[1]))
 
