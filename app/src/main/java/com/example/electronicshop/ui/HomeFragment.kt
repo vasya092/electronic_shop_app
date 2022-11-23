@@ -64,7 +64,6 @@ class HomeFragment : Fragment() {
         binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
 
         //Настройка Best Sellers Slider
-
         val bestSellersSliderAdapter = CompositeDelegateAdapter(
             BestSellersDelegateAdapter {
                 findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
