@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.graphics.drawable.DrawableCompat
@@ -37,6 +38,9 @@ class DetailFragment: Fragment() {
         return binding?.root
     }
 
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -63,16 +67,14 @@ class DetailFragment: Fragment() {
                 addToCartButton.setOnClickListener{
                     findNavController().navigate(R.id.action_detailFragment_to_cartFragment)
                 }
-
             }
-
-
-
         }
     }
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity).setLocationVisibility(View.INVISIBLE)
+        (activity as MainActivity).setHomeToolbarVisibility(View.GONE)
+        (activity as MainActivity).setCartToolbarVisibility(View.GONE)
+        (activity as MainActivity).setDetailToolbarVisibility(View.VISIBLE)
     }
 }

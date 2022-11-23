@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.MainActivity
 import com.example.electronicshop.databinding.FragmentCartBinding
 import com.example.electronicshop.ui.adapter.CartListDelegateAdapter
 import com.example.electronicshop.ui.viewmodel.CartViewModel
@@ -43,5 +44,12 @@ class CartFragment: Fragment() {
                  listItemRecycler.adapter = cartItemsAdapter
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).setHomeToolbarVisibility(View.GONE)
+        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
+        (activity as MainActivity).setCartToolbarVisibility(View.VISIBLE)
     }
 }

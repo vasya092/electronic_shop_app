@@ -64,6 +64,7 @@ class HomeFragment : Fragment() {
         binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
 
         //Настройка Best Sellers Slider
+
         val bestSellersSliderAdapter = CompositeDelegateAdapter(
             BestSellersDelegateAdapter {
                 findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
@@ -74,11 +75,14 @@ class HomeFragment : Fragment() {
         }
         binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
         binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
+
     }
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity).setLocationVisibility(View.VISIBLE)
+        (activity as MainActivity).setHomeToolbarVisibility(View.VISIBLE)
+        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
+        (activity as MainActivity).setCartToolbarVisibility(View.GONE)
     }
 
 }

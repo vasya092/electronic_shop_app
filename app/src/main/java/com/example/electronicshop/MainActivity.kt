@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import com.example.electronicshop.databinding.ActivityMainBinding
 import com.example.electronicshop.ui.FilterBottomSheet
 
@@ -22,10 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
-    override fun getSupportFragmentManager(): FragmentManager {
-        return super.getSupportFragmentManager()
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,26 +31,38 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         navController = findNavController(R.id.nav_host_fragment_content_main)
         val actionBar = binding.toolbarRoot.toolbarActionbar
-        actionBar.title = ""
         setSupportActionBar(actionBar)
+//        binding.toolbarRoot.toolbarActionbar.setupWithNavController(navController)
+
+        handleToolbarButtons(binding)
         hideSystemUI()
+
     }
-    fun setLocationVisibility(visibility: Int) {
+    fun setHomeToolbarVisibility(visibility: Int) {
         binding.toolbarRoot.locationToolbar.visibility = visibility
     }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return true
+
+    fun setDetailToolbarVisibility(visibility: Int) {
+        binding.toolbarRoot.detailToolbar.visibility = visibility
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            R.id.action_filter -> {
-                val modalBottomSheet = FilterBottomSheet()
-                modalBottomSheet.show(supportFragmentManager, modalBottomSheet.tag)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    fun setCartToolbarVisibility(visibility: Int) {
+        binding.toolbarRoot.cartToolbar.visibility = visibility
+    }
+
+    private fun handleToolbarButtons(binding: ActivityMainBinding) {
+        binding.toolbarRoot.toolbarButtonFilter.setOnClickListener{
+            val modalBottomSheet = FilterBottomSheet()
+            modalBottomSheet.show(supportFragmentManager, modalBottomSheet.tag)
+        }
+        binding.toolbarRoot.toolbarBack.setOnClickListener{
+            navController.navigate(R.id.action_detailFragment_to_homeFragment)
+        }
+        binding.toolbarRoot.cartToolbarBack.setOnClickListener{
+            navController.navigate(R.id.action_cartFragment_to_detailFragment)
+        }
+        binding.toolbarRoot.toolbarCart.setOnClickListener{
+            navController.navigate(R.id.action_detailFragment_to_cartFragment)
         }
     }
 
@@ -62,9 +72,6 @@ class MainActivity : AppCompatActivity() {
             window.decorView.findViewById(android.R.id.content)).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
 
-            // When the screen is swiped up at the bottom
-            // of the application, the navigationBar shall
-            // appear for some time
             controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
     }

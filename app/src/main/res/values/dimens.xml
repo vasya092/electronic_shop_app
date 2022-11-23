@@ -118,4 +118,8 @@
     <dimen name="padding_top_spinners_wrapper">40dp</dimen>
     <dimen name="margin_top_selector">10dp</dimen>
     <dimen name="margin_top_label_selector">20dp</dimen>
+    <dimen name="padding_start_toolbar">35dp</dimen>
+    <dimen name="padding_end_toolbar">42dp</dimen>
+    <dimen name="margin_end_address">9dp</dimen>
+    <dimen name="text_size_location_address">15sp</dimen>
 </resources>

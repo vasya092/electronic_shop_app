@@ -30,6 +30,8 @@
     <string name="price">Price</string>
     <string name="size">Size</string>
     <string name="add_to_cart">Add To Cart</string>
+    <string name="product_detail">Product Details</string>
+    <string name="add_address">Add address</string>
     <string-array name="brands_array">
         <item>Samsung</item>
         <item>Apple</item>
