@@ -22,5 +22,7 @@
     <string name="checkout_button">Checkout</string>
     <string name="delivery">Delivery</string>
     <string name="total">Total</string>
+    <string name="filter">Filter</string>
+    <string name="zihuatanejo_gro">Zihuatanejo, Gro</string>
 
 </resources>

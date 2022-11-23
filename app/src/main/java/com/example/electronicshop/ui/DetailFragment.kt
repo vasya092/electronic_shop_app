@@ -12,6 +12,7 @@ import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.MainActivity
 import com.example.electronicshop.R
 import com.example.electronicshop.databinding.FragmentDetailBinding
 import com.example.electronicshop.ui.adapter.CarouselAdapter
@@ -38,6 +39,7 @@ class DetailFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewModel.productDetail.observe(viewLifecycleOwner) {
             binding?.apply {
                 productDetailTitle.text = it.title
@@ -67,5 +69,10 @@ class DetailFragment: Fragment() {
 
 
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).setLocationVisibility(View.INVISIBLE)
     }
 }
