@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.MainActivity
 import com.example.electronicshop.databinding.FragmentCartBinding
 import com.example.electronicshop.ui.adapter.CartListDelegateAdapter
 import com.example.electronicshop.ui.viewmodel.CartViewModel
 import com.livermor.delegateadapter.delegate.CompositeDelegateAdapter
+import java.text.NumberFormat
+import java.util.*
 import javax.inject.Inject
 
 class CartFragment: Fragment() {
@@ -34,14 +37,25 @@ class CartFragment: Fragment() {
             CartListDelegateAdapter()
         )
 
+        val numberFormat = NumberFormat.getCurrencyInstance()
+        numberFormat.maximumFractionDigits = 0
+        numberFormat.currency = Currency.getInstance("USD")
+
         viewModel.cartData.observe(viewLifecycleOwner) {
 
             cartItemsAdapter.swapData(it.basket)
             binding?.apply {
                 deliveryValue.text = it.delivery
-                totalValue.text = it.total.toString()
+                totalValue.text = numberFormat.format(it.total)
                  listItemRecycler.adapter = cartItemsAdapter
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).setHomeToolbarVisibility(View.GONE)
+        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
+        (activity as MainActivity).setCartToolbarVisibility(View.VISIBLE)
     }
 }

@@ -6,6 +6,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white33">#33FFFFFF</color>
     <color name="gray">#FFF8F8F8</color>
+    <color name="dark_gray">#FFB3B3C3</color>
     <color name="color_discount_price">#CCCCCC</color>
     <color name="advantage_title_color">#B7B7B7</color>
     <color name="color_counter_background">#282843</color>

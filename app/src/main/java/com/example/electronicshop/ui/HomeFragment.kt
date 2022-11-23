@@ -1,15 +1,19 @@
 package com.example.electronicshop.ui
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.MainActivity
 import com.example.electronicshop.R
 import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
@@ -42,8 +46,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems(), 3)
 
-        val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
         binding?.categoryMenuSlider?.adapter = adapter
 
         val hotSalesSliderAdapter = CompositeDelegateAdapter(
@@ -71,6 +75,14 @@ class HomeFragment : Fragment() {
         }
         binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
         binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).setHomeToolbarVisibility(View.VISIBLE)
+        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
+        (activity as MainActivity).setCartToolbarVisibility(View.GONE)
     }
 
 }

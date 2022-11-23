@@ -8,6 +8,18 @@
     android:paddingBottom="@dimen/padding_bottom_best_seller_item"
     android:paddingTop="@dimen/best_seller_padding_to_fix_image_corner"
     android:background="@drawable/rounded_best_seller_item_background">
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/best_sellers_like_product"
+        android:elevation="2dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/margin_top_like"
+        android:layout_marginEnd="@dimen/margin_end_like"
+        android:src="@drawable/ic_like"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/circle_background"
+        />
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/best_seller_item_image"
         android:layout_width="181dp"

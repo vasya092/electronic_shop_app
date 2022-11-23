@@ -5,7 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <include layout="@layout/content_main" />
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"
+            android:id="@+id/toolbar_root"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/content_main"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_actionbar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

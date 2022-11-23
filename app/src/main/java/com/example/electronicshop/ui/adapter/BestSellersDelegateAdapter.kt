@@ -1,6 +1,7 @@
 package com.example.electronicshop.ui.adapter
 
 import coil.load
+import com.example.electronicshop.R
 import com.example.electronicshop.databinding.BestSellersSliderItemBinding
 import com.example.electronicshop.model.BestSellerProduct
 import com.livermor.delegateadapter.delegate.ViewBindingDelegateAdapter
@@ -29,6 +30,9 @@ class BestSellersDelegateAdapter(
         bestSellerItemImage.load(item.picture)
         root.setOnClickListener {
             clickListener(item)
+        }
+        if(item.is_favorites) {
+            bestSellersLikeProduct.setImageResource(R.drawable.ic_like_solid)
         }
     }
 }

@@ -101,4 +101,27 @@
     <dimen name="padding_text_field_counter">7dp</dimen>
     <dimen name="margin_from_counter_value">6dp</dimen>
     <dimen name="line_extra_3dp">3dp</dimen>
+    <dimen name="margin_end_pointer_to_location">11dp</dimen>
+    <dimen name="extra_line_location_title">4dp</dimen>
+    <dimen name="margin_start_location_arrow">8dp</dimen>
+    <dimen name="size_close_button">37dp</dimen>
+    <dimen name="padding_horizontal_done_button">20dp</dimen>
+    <dimen name="padding_vertical_done_button">7dp</dimen>
+    <dimen name="size_done_button">18sp</dimen>
+    <dimen name="size_filter_options">18sp</dimen>
+    <dimen name="selector_height">37dp</dimen>
+    <dimen name="padding_top_bottom_sheet">24dp</dimen>
+    <dimen name="padding_start_bottom_sheet">44dp</dimen>
+    <dimen name="padding_end_bottom_sheet">20dp</dimen>
+    <dimen name="padding_bottom_bottom_sheet">44dp</dimen>
+    <dimen name="margin_end_spinners_wrapper">11dp</dimen>
+    <dimen name="padding_top_spinners_wrapper">40dp</dimen>
+    <dimen name="margin_top_selector">10dp</dimen>
+    <dimen name="margin_top_label_selector">20dp</dimen>
+    <dimen name="padding_start_toolbar">35dp</dimen>
+    <dimen name="padding_end_toolbar">42dp</dimen>
+    <dimen name="margin_end_address">9dp</dimen>
+    <dimen name="text_size_location_address">15sp</dimen>
+    <dimen name="margin_end_like">15dp</dimen>
+    <dimen name="margin_top_like">11dp</dimen>
 </resources>

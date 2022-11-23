@@ -9,6 +9,7 @@
         android:id="@+id/cart_item_image"
         android:layout_width="@dimen/size_cart_list_image"
         android:layout_height="@dimen/size_cart_list_image"
+        android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
