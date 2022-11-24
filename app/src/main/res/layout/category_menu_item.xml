@@ -8,12 +8,13 @@
     android:layout_marginStart="@dimen/margin_start_category_menu_item"
     android:orientation="vertical">
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/category_menu_item_icon"
         android:src="@drawable/ic_phone"
         android:layout_width="@dimen/size_category_menu_item_icon"
         android:layout_height="@dimen/size_category_menu_item_icon"
-        android:background="@drawable/rounded_menu_selector"
+        android:padding="@dimen/paddin_category_image"
+        android:background="@drawable/circle_background"
         android:contentDescription="@string/icon_menu_item_category_text" />
     <TextView
         android:id="@+id/category_menu_item_title"

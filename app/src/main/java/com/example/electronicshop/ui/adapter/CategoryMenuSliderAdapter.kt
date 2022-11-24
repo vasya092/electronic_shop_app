@@ -12,21 +12,15 @@ class CategoryMenuSliderAdapter(
     private val dataset: ArrayList<CategoryItem>
 ): RecyclerView.Adapter<CategoryMenuSliderAdapter.CategoryMenuSliderViewHolder>() {
 
-    private var currentMenus = 1
-
     class CategoryMenuSliderViewHolder(
         private var binding: CategoryMenuItemBinding,
     ): RecyclerView.ViewHolder(binding.root) {
 
 
-        fun bind(categoryItem: CategoryItem, lastCategoryId: Int, currentMenu: Int) {
+        fun bind(categoryItem: CategoryItem, currentMenu: Int) {
             val context = binding.root.context
             binding.categoryMenuItemTitle.text = context.getText(categoryItem.titleResourceId)
             binding.categoryMenuItemIcon.setImageResource(categoryItem.imageResourceId)
-            if(categoryItem.id == lastCategoryId) {
-                val layoutParams = binding.categoryMenuItem.layoutParams
-                (layoutParams as ViewGroup.MarginLayoutParams).marginEnd = context.resources.getDimensionPixelSize(R.dimen.category_menu_last_item_margin)
-            }
 
             if(currentMenu == categoryItem.id){
                 binding.categoryMenuItemIcon.backgroundTintList = ColorStateList.valueOf(context.getColor(R.color.orange))
@@ -58,7 +52,7 @@ class CategoryMenuSliderAdapter(
             selectedPos = holder.layoutPosition
             notifyItemChanged(selectedPos)
         }
-        holder.bind(categoryItem, lastCategoryId, selectedPos)
+        holder.bind(categoryItem, selectedPos)
 
     }
 

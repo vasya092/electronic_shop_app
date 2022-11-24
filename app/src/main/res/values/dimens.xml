@@ -124,4 +124,7 @@
     <dimen name="text_size_location_address">15sp</dimen>
     <dimen name="margin_end_like">15dp</dimen>
     <dimen name="margin_top_like">11dp</dimen>
+    <dimen name="paddin_category_image">18dp</dimen>
+    <dimen name="padding_end_category_menu_slider">25dp</dimen>
+    <dimen name="padding_start_category_menu_slider">0dp</dimen>
 </resources>
