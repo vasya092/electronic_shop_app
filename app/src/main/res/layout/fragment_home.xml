@@ -49,6 +49,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/margin_top_category_menu_slider"
+        android:paddingStart="@dimen/padding_start_category_menu_slider"
+        android:paddingEnd="@dimen/padding_end_category_menu_slider"
+        android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/section_header"
         app:layout_constraintStart_toStartOf="parent"/>
