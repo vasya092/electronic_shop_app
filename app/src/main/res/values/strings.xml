@@ -2,4 +2,50 @@
     <string name="app_name">Electronic Shop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragHome_tv_selectCategory">Select Category</string>
+    <string name="fragHome_tv_viewAll">view all</string>
+    <string name="title_category_item_phones">Phones</string>
+    <string name="title_category_item_computers">Computers</string>
+    <string name="title_category_item_health">Health</string>
+    <string name="title_category_item_books">Books</string>
+    <string name="title_category_item_other">Other</string>
+    <string name="icon_menu_item_category_text">Иконка меню категорий</string>
+    <string name="text_start_badge_new">New</string>
+    <string name="text_hot_sales_buy_now">Buy now!</string>
+    <string name="text_hot_sales_section_title">Hot Sales</string>
+    <string name="shop_title_tab_item_product_detail">Shop</string>
+    <string name="details_title_tab_item_product_detail">Details</string>
+    <string name="detail_features">Features</string>
+    <string name="select_memory_text_constructor">%1$s gb</string>
+    <string name="title_select_options">Select color and capacity</string>
+    <string name="title_my_cart">My Cart</string>
+    <string name="checkout_button">Checkout</string>
+    <string name="delivery">Delivery</string>
+    <string name="total">Total</string>
+    <string name="filter">Filter</string>
+    <string name="zihuatanejo_gro">Zihuatanejo, Gro</string>
+    <string name="filter_options">Filter options</string>
+    <string name="bottom_sheet_done">Done</string>
+    <string name="brand">Brand</string>
+    <string name="price">Price</string>
+    <string name="size">Size</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="product_detail">Product Details</string>
+    <string name="add_address">Add address</string>
+    <string-array name="brands_array">
+        <item>Samsung</item>
+        <item>Apple</item>
+        <item>Xiaomi</item>
+    </string-array>
+    <string-array name="prices_array">
+        <item>$0 – $300</item>
+        <item>$300 – $500</item>
+        <item>$500 – $1000</item>
+        <item>$1000 – $5000</item>
+        <item>$5000 – $10000</item>
+    </string-array>
+    <string-array name="sizes_array">
+        <item>4.5 to 5.5 inches</item>
+        <item>4.5 to 5.5 inches</item>
+    </string-array>
 </resources>

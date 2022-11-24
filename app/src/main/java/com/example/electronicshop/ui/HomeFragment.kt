@@ -1,13 +1,27 @@
 package com.example.electronicshop.ui
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.electronicshop.BaseApplication
+import com.example.electronicshop.MainActivity
+import com.example.electronicshop.R
+import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.FragmentHomeBinding
+import com.example.electronicshop.ui.adapter.BestSellersDelegateAdapter
+import com.example.electronicshop.ui.adapter.CategoryMenuSliderAdapter
+import com.example.electronicshop.ui.adapter.HotSalesDelegateAdapter
 import com.example.electronicshop.ui.viewmodel.HomeFragmentViewModel
+import com.livermor.delegateadapter.delegate.CompositeDelegateAdapter
 import javax.inject.Inject
 
 /**
@@ -32,7 +46,42 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.homeTitle?.text = viewModel.info_text
+        val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
+        binding?.categoryMenuSlider?.adapter = adapter
+
+        val hotSalesSliderAdapter = CompositeDelegateAdapter(
+            HotSalesDelegateAdapter()
+        )
+        viewModel.homeProducts.observe(viewLifecycleOwner) {
+            hotSalesSliderAdapter.swapData(it)
+        }
+        binding?.hotSalesProductsSlider?.adapter = hotSalesSliderAdapter
+        //Слайдинг по типу карусели
+        PagerSnapHelper().attachToRecyclerView(binding?.hotSalesProductsSlider)
+        //Отступы для слайдера hotSales
+        var dividerItemDecoration = DividerItemDecoration(binding?.hotSalesProductsSlider?.context, 0)
+        binding?.hotSalesProductsSlider?.addItemDecoration(dividerItemDecoration)
+
+        //Настройка Best Sellers Slider
+
+        val bestSellersSliderAdapter = CompositeDelegateAdapter(
+            BestSellersDelegateAdapter {
+                findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
+            }
+        )
+        viewModel.bestSellerProducts.observe(viewLifecycleOwner) {
+            bestSellersSliderAdapter.swapData(it)
+        }
+        binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
+        binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).setHomeToolbarVisibility(View.VISIBLE)
+        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
+        (activity as MainActivity).setCartToolbarVisibility(View.GONE)
     }
 
 }

@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.electronicshop"
-        minSdk 21
+        minSdk 28
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -45,11 +45,11 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'com.github.Liverm0r:delegateadapters:4.0'
+    implementation 'io.coil-kt:coil:2.2.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
-
     /* Dagger2 - default dependency */
     implementation 'com.google.dagger:dagger:2.40'
     kapt 'com.google.dagger:dagger-compiler:2.40'
