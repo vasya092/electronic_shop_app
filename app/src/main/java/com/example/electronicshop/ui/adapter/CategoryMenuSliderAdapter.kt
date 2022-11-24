@@ -5,13 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.electronicshop.R
-import com.example.electronicshop.data.local.CategoryItemsData
 import com.example.electronicshop.databinding.CategoryMenuItemBinding
 import com.example.electronicshop.model.CategoryItem
 
 class CategoryMenuSliderAdapter(
-    private val dataset: ArrayList<CategoryItem>,
-    private val clickListener: Int
+    private val dataset: ArrayList<CategoryItem>
 ): RecyclerView.Adapter<CategoryMenuSliderAdapter.CategoryMenuSliderViewHolder>() {
 
     private var currentMenus = 1
@@ -20,27 +18,26 @@ class CategoryMenuSliderAdapter(
         private var binding: CategoryMenuItemBinding,
     ): RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(categoryItem: CategoryItem, isLastElement: Boolean, currentMenu: Int) {
+
+        fun bind(categoryItem: CategoryItem, lastCategoryId: Int, currentMenu: Int) {
             val context = binding.root.context
             binding.categoryMenuItemTitle.text = context.getText(categoryItem.titleResourceId)
             binding.categoryMenuItemIcon.setImageResource(categoryItem.imageResourceId)
-            if(isLastElement) {
+            if(categoryItem.id == lastCategoryId) {
                 val layoutParams = binding.categoryMenuItem.layoutParams
                 (layoutParams as ViewGroup.MarginLayoutParams).marginEnd = context.resources.getDimensionPixelSize(R.dimen.category_menu_last_item_margin)
             }
 
-            binding.categoryMenuItem.setOnClickListener{
+            if(currentMenu == categoryItem.id){
                 binding.categoryMenuItemIcon.backgroundTintList = ColorStateList.valueOf(context.getColor(R.color.orange))
                 binding.categoryMenuItemIcon.imageTintList = ColorStateList.valueOf(context.getColor(R.color.white))
                 binding.categoryMenuItemTitle.setTextColor(context.getColor(R.color.orange))
-            }
-        }
 
-        fun clearAll() {
-            val context = binding.root.context
-            binding.categoryMenuItemIcon.backgroundTintList = ColorStateList.valueOf(context.getColor(R.color.white))
-            binding.categoryMenuItemIcon.imageTintList = ColorStateList.valueOf(context.getColor(R.color.dark_gray))
-            binding.categoryMenuItemTitle.setTextColor(context.getColor(R.color.dark_blue))
+            } else {
+                binding.categoryMenuItemIcon.backgroundTintList = ColorStateList.valueOf(context.getColor(R.color.white))
+                binding.categoryMenuItemIcon.imageTintList = ColorStateList.valueOf(context.getColor(R.color.dark_gray))
+                binding.categoryMenuItemTitle.setTextColor(context.getColor(R.color.dark_blue))
+            }
         }
     }
 
@@ -50,13 +47,18 @@ class CategoryMenuSliderAdapter(
             CategoryMenuItemBinding.inflate(layoutInflater, parent, false)
         )
     }
+    private var selectedPos = RecyclerView.NO_POSITION;
 
     override fun onBindViewHolder(holder: CategoryMenuSliderViewHolder, position: Int) {
         val categoryItem = dataset[position]
-        val isLastElement = position == dataset.lastIndex
-
-        holder.clearAll()
-        holder.bind(categoryItem, isLastElement, currentMenus)
+        val lastCategoryId = dataset.lastIndex
+        holder.itemView.isSelected = position == selectedPos
+        holder.itemView.setOnClickListener{
+            notifyItemChanged(selectedPos)
+            selectedPos = holder.layoutPosition
+            notifyItemChanged(selectedPos)
+        }
+        holder.bind(categoryItem, lastCategoryId, selectedPos)
 
     }
 

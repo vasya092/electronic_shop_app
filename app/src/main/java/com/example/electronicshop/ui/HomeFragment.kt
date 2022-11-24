@@ -46,8 +46,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems(), 3)
-
+        val adapter = CategoryMenuSliderAdapter(CategoryItemsData.getCategoryItems())
         binding?.categoryMenuSlider?.adapter = adapter
 
         val hotSalesSliderAdapter = CompositeDelegateAdapter(
