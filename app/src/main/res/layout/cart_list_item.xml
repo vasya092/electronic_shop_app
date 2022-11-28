@@ -42,7 +42,7 @@
         android:textFontWeight="500"
         tools:text="$3000.00"
         />
-    <com.example.electronicshop.presentation.custom.CounterView
+    <com.example.ui.custom.CounterView
         android:id="@+id/cart_item_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_top_counter">14dp</dimen>
+    <dimen name="padding_bottom_counter">8dp</dimen>
+    <dimen name="padding_counter_value">7dp</dimen>
+    <dimen name="margin_top_counter_value">6dp</dimen>
+    <dimen name="margin_top_counter_minus">6dp</dimen>
+    <dimen name="ts_counter_value">20sp</dimen>
+</resources>

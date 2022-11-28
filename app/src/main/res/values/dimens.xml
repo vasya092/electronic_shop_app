@@ -82,9 +82,6 @@
     <dimen name="padding_horizontal_cart_container">33dp</dimen>
     <dimen name="padding_top_cart_container">35dp</dimen>
     <dimen name="size_cart_list_image">88dp</dimen>
-    <dimen name="padding_top_counter">14dp</dimen>
-    <dimen name="padding_bottom_counter">8dp</dimen>
-    <dimen name="text_size_counter_value">20sp</dimen>
     <dimen name="margin_end_counter">17dp</dimen>
     <dimen name="text_size_cart_item_title">20sp</dimen>
     <dimen name="text_size_item_price">20sp</dimen>
@@ -98,8 +95,6 @@
     <dimen name="text_size_button">20sp</dimen>
     <dimen name="text_size_cart_sub_info">15sp</dimen>
     <dimen name="margin_bottom_first_divider">15dp</dimen>
-    <dimen name="padding_text_field_counter">7dp</dimen>
-    <dimen name="margin_from_counter_value">6dp</dimen>
     <dimen name="line_extra_3dp">3dp</dimen>
     <dimen name="margin_end_pointer_to_location">11dp</dimen>
     <dimen name="extra_line_location_title">4dp</dimen>

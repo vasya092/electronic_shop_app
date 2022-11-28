@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange">#FFFF6E4E</color>
+    <color name="dark_blue">#FF010035</color>
+    <color name="black">#FF101010</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white33">#33FFFFFF</color>
+    <color name="gray">#FFF8F8F8</color>
+    <color name="dark_gray">#FFB3B3C3</color>
+    <color name="color_discount_price">#CCCCCC</color>
+    <color name="advantage_title_color">#B7B7B7</color>
+    <color name="color_counter_background">#282843</color>
+</resources>
