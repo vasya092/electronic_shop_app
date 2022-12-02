@@ -6,4 +6,10 @@
     <dimen name="margin_top_counter_value">6dp</dimen>
     <dimen name="margin_top_counter_minus">6dp</dimen>
     <dimen name="ts_counter_value">20sp</dimen>
+<!-- Search View   -->
+    <dimen name="text_size_search_field">12sp</dimen>
+    <dimen name="padding_horizontal_search">60dp</dimen>
+    <dimen name="padding_vertical_search">9dp</dimen>
+    <dimen name="radius_search_edit_text">15dp</dimen>
+    <dimen name="margin_start_search_icon">24dp</dimen>
 </resources>

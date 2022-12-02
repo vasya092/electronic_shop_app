@@ -8,10 +8,6 @@
     <dimen name="section_title_margin_end">18dp</dimen>
     <dimen name="category_menu_last_item_margin">25dp</dimen>
     <dimen name="category_menu_item_font_size">12sp</dimen>
-    <dimen name="margin_start_search_icon">24dp</dimen>
-    <dimen name="padding_horizontal_search">60dp</dimen>
-    <dimen name="padding_vertical_search">9dp</dimen>
-    <dimen name="text_size_search">12sp</dimen>
     <dimen name="margin_end_search_field">11dp</dimen>
     <dimen name="margin_start_search_container">32dp</dimen>
     <dimen name="margin_end_search_container">37dp</dimen>
@@ -40,7 +36,6 @@
     <dimen name="min_height_button">0dp</dimen>
     <dimen name="padding_vertical_button">5dp</dimen>
     <dimen name="padding_horizontal_button">27dp</dimen>
-    <dimen name="radius_search_edit_text">15dp</dimen>
     <dimen name="padding_top_section_hot_sales">24dp</dimen>
     <dimen name="padding_top_best_sellers">11dp</dimen>
     <dimen name="text_size_best_seller_price">16sp</dimen>
