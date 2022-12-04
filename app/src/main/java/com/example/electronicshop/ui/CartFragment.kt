@@ -51,11 +51,4 @@ class CartFragment: Fragment() {
             }
         }
     }
-
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity).setHomeToolbarVisibility(View.GONE)
-        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
-        (activity as MainActivity).setCartToolbarVisibility(View.VISIBLE)
-    }
 }

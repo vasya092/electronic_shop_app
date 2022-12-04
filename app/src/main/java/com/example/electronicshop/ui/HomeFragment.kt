@@ -74,14 +74,6 @@ class HomeFragment : Fragment() {
         }
         binding?.bestSalesSlider?.layoutManager = GridLayoutManager(context, 2)
         binding?.bestSalesSlider?.adapter = bestSellersSliderAdapter
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity).setHomeToolbarVisibility(View.VISIBLE)
-        (activity as MainActivity).setDetailToolbarVisibility(View.GONE)
-        (activity as MainActivity).setCartToolbarVisibility(View.GONE)
     }
 
 }

@@ -32,38 +32,13 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment_content_main)
         val actionBar = binding.toolbarRoot.toolbarActionbar
         setSupportActionBar(actionBar)
-//        binding.toolbarRoot.toolbarActionbar.setupWithNavController(navController)
-
-        handleToolbarButtons(binding)
+        binding.toolbarRoot.toolbarActionbar.setupWithNavController(navController)
         hideSystemUI()
 
     }
-    fun setHomeToolbarVisibility(visibility: Int) {
-        binding.toolbarRoot.locationToolbar.visibility = visibility
-    }
 
-    fun setDetailToolbarVisibility(visibility: Int) {
-        binding.toolbarRoot.detailToolbar.visibility = visibility
-    }
-
-    fun setCartToolbarVisibility(visibility: Int) {
-        binding.toolbarRoot.cartToolbar.visibility = visibility
-    }
-
-    private fun handleToolbarButtons(binding: ActivityMainBinding) {
-        binding.toolbarRoot.toolbarButtonFilter.setOnClickListener{
-            val modalBottomSheet = FilterBottomSheet()
-            modalBottomSheet.show(supportFragmentManager, modalBottomSheet.tag)
-        }
-        binding.toolbarRoot.toolbarBack.setOnClickListener{
-            navController.navigate(R.id.action_detailFragment_to_homeFragment)
-        }
-        binding.toolbarRoot.cartToolbarBack.setOnClickListener{
-            navController.navigate(R.id.action_cartFragment_to_detailFragment)
-        }
-        binding.toolbarRoot.toolbarCart.setOnClickListener{
-            navController.navigate(R.id.action_detailFragment_to_cartFragment)
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
     private fun hideSystemUI() {

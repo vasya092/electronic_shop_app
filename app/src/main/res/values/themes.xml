@@ -26,4 +26,7 @@
         <item name="android:fontFamily">@font/mark_pro</item>
         <item name="android:textSize">18sp</item>
     </style>
+    <style name="ToolBarStyles" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="titleTextColor">@color/dark_blue</item>
+    </style>
 </resources>
