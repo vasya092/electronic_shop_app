@@ -1,19 +1,14 @@
 package com.example.electronicshop.ui
 
 import android.content.res.ColorStateList
-import android.graphics.BlendMode
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.electronicshop.BaseApplication
-import com.example.electronicshop.MainActivity
 import com.example.electronicshop.R
 import com.example.electronicshop.databinding.FragmentDetailBinding
 import com.example.electronicshop.ui.adapter.CarouselAdapter
@@ -37,8 +32,6 @@ class DetailFragment: Fragment() {
         binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding?.root
     }
-
-
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

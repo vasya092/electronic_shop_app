@@ -32,9 +32,9 @@
     <string name="add_to_cart">Add To Cart</string>
     <string name="product_detail">Product Details</string>
     <string name="add_address">Add address</string>
-    <string name="title_main_page">Main Page</string>
-    <string name="title_detail_page">Smartphone Detail</string>
-    <string name="title_cart_page">Cart</string>
+    <string name="title_main_page"></string>
+    <string name="title_detail_page"></string>
+    <string name="title_cart_page"></string>
     <string-array name="brands_array">
         <item>Samsung</item>
         <item>Apple</item>

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="?android:actionBarSize"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:paddingEnd="@dimen/padding_start_toolbar"
-    android:paddingStart="@dimen/padding_end_toolbar"
+    android:theme="@style/AppbarTheme"
+    android:background="@android:color/transparent"
+    app:layout_constraintStart_toStartOf="parent">
+<com.google.android.material.appbar.MaterialToolbar
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
     android:id="@+id/toolbar_actionbar"
-    android:background="@android:color/transparent">
-</androidx.appcompat.widget.Toolbar>
+    android:elevation="0.15dp"
+    app:menu="@menu/main_menu"
+    android:paddingEnd="@dimen/padding_start_toolbar"
+    android:paddingStart="@dimen/padding_end_toolbar" />
+</com.google.android.material.appbar.AppBarLayout>

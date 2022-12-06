@@ -30,10 +30,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         navController = findNavController(R.id.nav_host_fragment_content_main)
-        val actionBar = binding.toolbarRoot.toolbarActionbar
-        setSupportActionBar(actionBar)
         binding.toolbarRoot.toolbarActionbar.setupWithNavController(navController)
-        hideSystemUI()
+        binding.toolbarRoot.toolbarActionbar.title = ""
 
     }
 

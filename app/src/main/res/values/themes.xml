@@ -29,4 +29,9 @@
     <style name="ToolBarStyles" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="titleTextColor">@color/dark_blue</item>
     </style>
+
+    <style name="AppbarTheme" parent="Widget.Material3.Toolbar">
+        <item name="colorControlNormal">@color/orange</item>
+    </style>
+
 </resources>

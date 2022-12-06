@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.takewith.MainActivity">
     <item
-        android:id="@+id/action_filter"
-        android:icon="@drawable/ic_filter"
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_cart"
         app:showAsAction="always"
-        android:title="@string/filter" />
+        android:title="@string/title_my_cart" />
 </menu>
