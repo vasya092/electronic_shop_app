@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.WindowCompat
@@ -31,8 +32,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         navController = findNavController(R.id.nav_host_fragment_content_main)
         binding.toolbarRoot.toolbarActionbar.setupWithNavController(navController)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.homeFragment) {
+                binding.toolbarWrapper.visibility = View.GONE
+            } else {
+                binding.toolbarWrapper.visibility = View.VISIBLE
+            }
+        }
         binding.toolbarRoot.toolbarActionbar.title = ""
-
+        hideSystemUI()
     }
 
     override fun onSupportNavigateUp(): Boolean {
