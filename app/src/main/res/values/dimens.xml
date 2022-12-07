@@ -91,9 +91,6 @@
     <dimen name="text_size_cart_sub_info">15sp</dimen>
     <dimen name="margin_bottom_first_divider">15dp</dimen>
     <dimen name="line_extra_3dp">3dp</dimen>
-    <dimen name="margin_end_pointer_to_location">11dp</dimen>
-    <dimen name="extra_line_location_title">4dp</dimen>
-    <dimen name="margin_start_location_arrow">8dp</dimen>
     <dimen name="size_close_button">37dp</dimen>
     <dimen name="padding_horizontal_done_button">20dp</dimen>
     <dimen name="padding_vertical_done_button">7dp</dimen>
@@ -117,4 +114,5 @@
     <dimen name="paddin_category_image">18dp</dimen>
     <dimen name="padding_end_category_menu_slider">25dp</dimen>
     <dimen name="padding_start_category_menu_slider">0dp</dimen>
+    <dimen name="vertical_padding_select_location">20dp</dimen>
 </resources>

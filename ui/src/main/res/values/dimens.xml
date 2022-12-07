@@ -12,4 +12,8 @@
     <dimen name="padding_vertical_search">9dp</dimen>
     <dimen name="radius_search_edit_text">15dp</dimen>
     <dimen name="margin_start_search_icon">24dp</dimen>
+<!--  Location View  -->
+    <dimen name="margin_end_pointer_to_location">11dp</dimen>
+    <dimen name="extra_line_location_title">4dp</dimen>
+    <dimen name="margin_start_location_arrow">8dp</dimen>
 </resources>
