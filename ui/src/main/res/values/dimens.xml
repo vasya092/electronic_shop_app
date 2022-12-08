@@ -16,4 +16,5 @@
     <dimen name="margin_end_pointer_to_location">11dp</dimen>
     <dimen name="extra_line_location_title">4dp</dimen>
     <dimen name="margin_start_location_arrow">8dp</dimen>
+    <dimen name="height_location_selector">20dp</dimen>
 </resources>

@@ -5,6 +5,11 @@
     <item
         android:id="@+id/action_cart"
         android:icon="@drawable/ic_cart"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         android:title="@string/title_my_cart" />
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter"
+        app:showAsAction="ifRoom"
+        android:title="@string/filter_options" />
 </menu>

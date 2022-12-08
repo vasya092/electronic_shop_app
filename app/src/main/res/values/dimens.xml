@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!-- Main Page   -->
+    <dimen name="height_location_selector">20dp</dimen>
     <dimen name="main_padding_top">15dp</dimen>
     <dimen name="main_padding_start_and_end">15dp</dimen>
     <dimen name="section_title_font_size">25sp</dimen>
@@ -34,6 +36,7 @@
     <dimen name="margin_start_category_menu_item">23dp</dimen>
     <dimen name="size_category_menu_item_icon">71dp</dimen>
     <dimen name="min_height_button">0dp</dimen>
+
     <dimen name="padding_vertical_button">5dp</dimen>
     <dimen name="padding_horizontal_button">27dp</dimen>
     <dimen name="padding_top_section_hot_sales">24dp</dimen>
