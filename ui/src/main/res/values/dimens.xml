@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!-- Main Dimensions   -->
+    <dimen name="ts_heading">24sp</dimen>
+    <dimen name="ts_mini_medium">15sp</dimen>
+<!-- Counter View   -->
     <dimen name="padding_top_counter">14dp</dimen>
     <dimen name="padding_bottom_counter">8dp</dimen>
     <dimen name="padding_counter_value">7dp</dimen>
@@ -17,4 +21,7 @@
     <dimen name="extra_line_location_title">4dp</dimen>
     <dimen name="margin_start_location_arrow">8dp</dimen>
     <dimen name="height_location_selector">20dp</dimen>
+<!--  Section Header View  -->
+    <dimen name="padding_start_and_end_base">15dp</dimen>
+    <dimen name="margin_end_view_all_text">18dp</dimen>
 </resources>
